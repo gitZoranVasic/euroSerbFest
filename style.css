@@ -1,0 +1,206 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .wrapper .upper {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0A1D3B), to(#253D63));
+  background: linear-gradient(#0A1D3B, #253D63);
+}
+
+@media screen and (min-width: 1600px) {
+  body .wrapper .upper {
+    height: 70%;
+  }
+}
+
+body .wrapper .upper .stars {
+  background-image: url("Assets/stars.png");
+  width: 100%;
+  height: 80%;
+  background-size: cover;
+  background-position-x: 50%;
+  position: absolute;
+  top: 0;
+}
+
+body .wrapper .upper .logo {
+  position: absolute;
+  top: 0;
+  bottom: 40%;
+  margin: auto;
+  z-index: 2;
+  max-width: 200px;
+}
+
+@media screen and (min-width: 1600px) {
+  body .wrapper .upper .logo {
+    max-width: 250px;
+    bottom: 35%;
+  }
+}
+
+body .wrapper .upper img {
+  z-index: 2;
+}
+
+@media screen and (min-width: 1250px) {
+  body .wrapper .upper img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  body .wrapper .upper img {
+    width: 1250px;
+  }
+}
+
+body .wrapper .lower {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background-color: #A80F1D;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body .wrapper .lower .taste-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 2;
+  margin-top: -100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .wrapper .lower .taste-wrap a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .wrapper .lower .taste-wrap a .taste-image {
+  max-width: 800px;
+  width: 80%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  z-index: 3;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body .wrapper .lower .taste-wrap a .taste-image:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  width: 100%;
+  cursor: pointer;
+}
+
+body .wrapper .lower .taste-wrap .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#253D63), to(#0A1D3B));
+  background: linear-gradient(#253D63, #0A1D3B);
+  color: white;
+  text-align: center;
+  margin-top: -60px;
+  z-index: 2;
+  padding: 20px 30px 20px 30px;
+}
+
+body .wrapper .lower .taste-wrap .box p {
+  padding: 0;
+  margin: 0;
+}
+
+body .wrapper .lower .taste-wrap .box .month {
+  font-weight: 1000;
+  font-size: 30px;
+}
+
+body .wrapper .lower .taste-wrap .box .time {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+body .wrapper .lower .taste-wrap .social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body .wrapper .lower .taste-wrap .social-media img {
+  max-width: 70px;
+}
+/*# sourceMappingURL=style.css.map */

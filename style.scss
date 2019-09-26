@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+
+    .wrapper {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+
+        .upper {
+            position: relative;
+            width: 100%;
+            height: 50%;
+            display: flex;
+            overflow: hidden;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            background: linear-gradient(#0A1D3B, #253D63);
+
+            @media screen and (min-width: 1600px) {
+                height: 70%;
+            }
+
+            .stars {
+                background-image: url('Assets/stars.png');
+                width: 100%;
+                height: 80%;
+                background-size: cover;
+                background-position-x: 50%;
+                position: absolute;
+                top: 0;
+            }
+
+            .logo {
+                position: absolute;
+                top: 0;
+                bottom: 40%;
+                margin: auto;
+                z-index: 2;
+                max-width: 200px;
+
+                @media screen and (min-width: 1600px) {
+                    max-width: 250px;
+                    bottom: 35%;
+                }
+            }
+
+            img {
+
+                z-index: 2;
+
+                @media screen and (min-width: 1250px) {
+                    width: 100%;
+                }
+
+                @media screen and (max-width: 1250px) {
+                    width: 1250px;
+                }
+
+            }
+
+        }
+
+        .lower {
+            flex-grow: 1;
+            background-color: #A80F1D;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+
+            .taste-wrap {
+                display: flex;
+                flex-direction: column;
+                z-index: 2;
+                margin-top: -100px;
+                align-items: center;
+
+                a {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .taste-image {
+                        max-width: 800px;
+                        width: 80%;
+                        align-self: center;
+                        z-index: 3;
+                        transition: 0.3s;
+
+
+                        &:hover {
+                            transition: 0.3s;
+                            width: 100%;
+                            cursor: pointer;
+                        }
+
+                    }
+                }
+
+                .box {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    background: linear-gradient(#253D63, #0A1D3B);
+                    color: white;
+                    text-align: center;
+                    margin-top: -60px;
+                    z-index: 2;
+
+                    padding: 20px 30px 20px 30px;
+
+                    p {
+                        padding: 0;
+                        margin: 0;
+                    }
+
+                    .month {
+                        font-weight: 1000;
+                        font-size: 30px;
+                    }
+
+                    .time {
+                        font-weight: 500;
+                        font-size: 20px;
+                    }
+                }
+
+
+                .social-media {
+                    display: flex;
+                    flex-direction: row;
+
+                    img {
+                        max-width: 70px;
+                    }
+                }
+            }
+
+
+        }
+    }
+}
