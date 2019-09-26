@@ -82,6 +82,10 @@ body {
                 margin-top: -100px;
                 align-items: center;
 
+                @media screen and (max-width: 1250px) {
+                    margin-top: -70%;
+                }
+
                 a {
                     display: flex;
                     flex-direction: column;
@@ -116,19 +120,41 @@ body {
 
                     padding: 20px 30px 20px 30px;
 
+
+                    @media screen and (max-width: 1250px) {
+                        padding: 10px 15px 10px 15px;
+                        margin-top: -30px;
+                    }
+
+
                     p {
                         padding: 0;
                         margin: 0;
                     }
 
+                    .event-date-mobile {
+                        display: none !important;
+                    }
+
                     .month {
                         font-weight: 1000;
                         font-size: 30px;
+
+
+                        @media screen and (max-width: 1250px) {
+                            font-weight: 500px;
+                            font-size: 15px;
+                        }
                     }
 
                     .time {
                         font-weight: 500;
                         font-size: 20px;
+
+                        @media screen and (max-width: 1250px) {
+                            font-weight: 250;
+                            font-size: 10px;
+                        }
                     }
                 }
 
