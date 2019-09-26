@@ -82,8 +82,8 @@ body {
                 margin-top: -100px;
                 align-items: center;
 
-                @media screen and (max-width: 1250px) {
-                    margin-top: -70%;
+                @media screen and (min-width: 1600px) {
+                    margin-top: -200px;
                 }
 
                 a {
@@ -108,6 +108,7 @@ body {
                     }
                 }
 
+
                 .box {
                     display: flex;
                     flex-direction: column;
@@ -115,25 +116,12 @@ body {
                     background: linear-gradient(#253D63, #0A1D3B);
                     color: white;
                     text-align: center;
-                    margin-top: -60px;
                     z-index: 2;
-
                     padding: 20px 30px 20px 30px;
-
-
-                    @media screen and (max-width: 1250px) {
-                        padding: 10px 15px 10px 15px;
-                        margin-top: -30px;
-                    }
-
 
                     p {
                         padding: 0;
                         margin: 0;
-                    }
-
-                    .event-date-mobile {
-                        display: none !important;
                     }
 
                     .month {
@@ -155,6 +143,38 @@ body {
                             font-weight: 250;
                             font-size: 10px;
                         }
+                    }
+                }
+
+                .information-boxes {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    z-index: 2;
+                    margin-top: -60px;
+
+                    @media screen and (max-width: 1600px) {
+                        display: none;
+                    }
+                }
+
+                .information-boxes-mobile {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    z-index: 2;
+                    margin-top: -30px;
+
+                    .box {
+                        padding: 10px 5px 10px 5px;
+                    }
+
+                    .event-date {
+                        margin-bottom: 5px;
+                    }
+
+                    @media screen and (min-width: 1600px) {
+                        display: none;
                     }
                 }
 
