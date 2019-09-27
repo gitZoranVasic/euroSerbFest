@@ -1,26 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
 
     display: flex;
     flex-direction: column;
     margin: 0;
     padding: 0;
-    height: 100vh;
     width: 100vw;
-    overflow: hidden;
+    max-width: 100vw;
     font-family: 'Montserrat', sans-serif;
     color: white;
     font-weight: 800;
     align-items: center;
+    overflow: overlay;
 
     background: linear-gradient(#0A1D3B, #253D63);
 
-    header {
+    .desktop-header {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         background: #A80F1D;
         width: 90%;
-        position: sticky;
+        position: fixed;
+        padding: 15px 0;
+        max-width: 100vw;
+
+        border-radius: 0 0 15px 15px;
 
 
         ul {
@@ -36,4 +46,241 @@ body {
         }
     }
 
+    .mobile-disabled {
+        @media screen and (max-width: 1250px) {
+            display: none;
+        }
+    }
+
+    .desktop-disabled {
+        @media screen and (min-width: 1250px) {
+            display: none;
+        }
+    }
+
+
+    /* MENU STYLES */
+    .menu-wrap {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        max-width: 100vw;
+
+        .toggler {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            opacity: 0;
+
+            &:checked {
+
+                &~.menu {
+                    visibility: visible;
+
+                    &>div {
+                        transform: scale(1);
+                        transition-duration: 0.75s;
+
+                        &>div {
+                            opacity: 1;
+                            transition: opacity 0.4s ease 0.4s;
+
+                        }
+                    }
+                }
+
+                &+.hamburger {
+                    &>div {
+                        transform: rotate(135deg);
+
+                        &:before {
+                            top: 0;
+                            transform: rotate(90deg);
+                        }
+
+                        &:after {
+                            top: 0;
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+
+                &:hover {
+                    &+.hamburger {
+                        &>div {
+                            transform: rotate(225deg);
+                        }
+                    }
+                }
+            }
+        }
+
+        .hamburger {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 60px;
+            height: 60px;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            div {
+                position: relative;
+                flex: none;
+                width: 100%;
+                height: 2px;
+                background: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.4s ease;
+
+                &::before,
+                &::after {
+                    content: '';
+                    position: absolute;
+                    z-index: 1;
+                    top: -10px;
+                    width: 100%;
+                    height: 2px;
+                    background: inherit;
+                }
+
+                &::after {
+                    top: 10px;
+                }
+            }
+        }
+
+        .menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            visibility: hidden;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &>div {
+                background: #A80F1D;
+                border-radius: 50%;
+                width: 200vw;
+                height: 200vw;
+                display: flex;
+                flex: none;
+                align-items: center;
+                justify-content: center;
+                transform: scale(0);
+                transition: all 0.4s ease;
+
+                &>div {
+                    text-align: center;
+                    max-width: 90vw;
+                    max-height: 100vh;
+                    opacity: 0;
+                    transition: opacity 0.4s ease;
+
+                    &>ul {
+                        &>li {
+                            list-style: none;
+                            color: #fff;
+                            font-size: 1rem;
+                            padding: 1rem;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+
+                            img {
+                                max-width: 25px;
+                                padding: 5px;
+                            }
+
+                            &>a {
+                                color: inherit;
+                                text-decoration: none;
+                                transition: color 0.4s ease;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .wrapper {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+        max-width: 80vw;
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            max-width: 70%;
+            justify-content: center;
+            align-items: flex-start;
+            text-align: left;
+
+            h1 {
+                font-size: 100px;
+                padding: 2rem 0;
+                margin: 0;
+            }
+
+            p {
+                font-size: 20px;
+                font-weight: 100;
+                padding: 50px 0;
+                line-height: 30px;
+            }
+
+            padding: 50px 0;
+
+            button {
+                all: unset;
+
+                background: #A80F1D;
+                padding: 20px;
+
+                margin: 10px;
+                font-size: 30px;
+                border-radius: 15px;
+                transition: 0.4s ease;
+
+
+                &:hover {
+                    transition: 0.4s ease;
+                    margin: 0;
+                    padding: 30px;
+                }
+
+            }
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        .divider {
+            width: 100vw;
+            padding: 40px 0;
+
+        }
+    }
 }
